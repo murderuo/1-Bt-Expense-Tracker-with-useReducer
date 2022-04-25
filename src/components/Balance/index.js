@@ -6,7 +6,7 @@ import { GlobalContext } from "../../context/GlobalState";
 function Balance() {
   const { transactions } = useContext(GlobalContext);
 
-  const amounts=transactions.map((transaction)=>transaction.amount)
+  //const amounts=transactions.map((transaction)=>transaction.amount)
   // console.log(amounts);
   const incomes=transactions.filter((transaction)=>transaction.amount>0).reduce((acc,item)=>(acc+=item.amount),0)
   const expenses=transactions.filter((transaction)=>transaction.amount<0).reduce((acc,item)=>(acc+=item.amount),0)
